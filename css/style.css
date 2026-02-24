@@ -1,0 +1,141 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI,sans-serif;text-align:center}
+
+/* Global BG */
+.global-bg{
+background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url("../assets/main-bg.jpg") center/cover no-repeat;
+color:white;
+}
+
+/* Layout */
+.reel{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+/* Buttons */
+button{
+padding:14px 34px;
+border-radius:40px;
+border:none;
+background:#ff5fa2;
+color:white;
+font-size:1rem;
+margin-top:15px;
+}
+
+/* Letter */
+.letter-bg{
+background:url("../assets/medieval-bg.jpg") center/cover;
+min-height:100vh;
+padding:20px;
+}
+
+.paper{
+max-width:720px;
+margin:auto;
+padding:25px;
+background:white;
+border-radius:14px;
+position:relative;
+}
+
+/* Quill */
+.quill{
+width:50px;
+position:absolute;
+top:8px;
+right:8px;
+}
+
+/* Ink */
+.ink-text{
+background:linear-gradient(90deg,#3b1f12 50%,transparent 50%);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:ink 6s forwards;
+}
+@keyframes ink{to{background-position:0}}
+
+/* Sprite */
+.scene{
+width:min(80vw,80vh);
+aspect-ratio:1/1;
+overflow:hidden;
+}
+
+.sprite{
+width:100%;
+height:100%;
+background-repeat:no-repeat;
+background-size:auto 100%;
+}
+
+.sprite-before{
+background-image:url("../assets/sprite-before.png");
+animation:before 14s steps(28) forwards;
+}
+
+.sprite-after{
+background-image:url("../assets/sprite-after.png");
+animation:after 8s steps(16) forwards;
+}
+
+@keyframes before{to{background-position:100%}}
+@keyframes after{to{background-position:100%}}
+
+.hidden{display:none}
+
+/* Dialogue */
+#dialogue{
+background:white;
+color:black;
+padding:14px 20px;
+border-radius:20px;
+margin-top:15px;
+}
+
+/* Video responsive */
+.video-wrapper{
+width:100%;
+max-width:420px;
+aspect-ratio:16/9;
+margin-top:20px;
+}
+
+.video-wrapper video{
+width:100%;
+height:100%;
+border-radius:16px;
+object-fit:contain;
+}
+
+/* Gift BG */
+.dark{
+background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url("../assets/main-bg.jpg") center/cover no-repeat;
+color:white;
+}
+
+/* Countdown */
+.countdown{
+font-size:clamp(3rem,10vw,4rem);
+background:linear-gradient(45deg,#ffd1f0,#ff7fc8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:pulse 1s infinite;
+}
+@keyframes pulse{50%{transform:scale(1.25)}}
+
+/* Continue */
+#continueBtn{
+padding:18px 55px;
+font-size:1.2rem;
+border-radius:50px;
+}
